@@ -33,16 +33,16 @@ a {
 header {
   position: relative;
   overflow: hidden;
-  .block{
+  .block {
     position: absolute;
     width: 100px;
     height: 100px;
     border-radius: 50%;
     outline: 1px solid rgb(255, 255, 255);
-    box-shadow: 3px 3px 10px rgba(0,0,0,.3);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
     right: 50%;
     top: 50%;
-    opacity: .1;
+    opacity: 0.1;
   }
   .nav {
     display: flex;
@@ -139,7 +139,7 @@ header {
       .profile_item_right {
         width: 50%;
         h3 {
-          letter-spacing: 0.5vw;
+          letter-spacing: 0.3vw;
           font-size: 1.5vw;
           margin-bottom: 1.8vw;
           padding-bottom: 0.5vw;
@@ -166,7 +166,7 @@ header {
         width: calc((100% - 0.8vw) / 2);
         border: 1px solid $main_font_color;
         margin-bottom: 1vw;
-        padding: 3vw 1vw;
+        padding: 2vw 1vw 1vw 1vw;
         text-align: center;
         display: grid;
         justify-items: center;
@@ -237,19 +237,21 @@ header {
   }
 }
 
+// works
 .works {
   section {
-    .item_box {
+    .works_item_box {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      .item {
+      .works_item {
         width: calc((100% - 1.2vw) / 3);
-        height: 48vw;
         border: 0.2px solid $main_font_color;
         text-align: center;
-        padding: 3vw 1vw;
-        position: relative;
+        padding: 2vw 1vw 1vw 1vw;
+        display: grid;
+        justify-items: center;
+        align-content: center;
         .works_title {
           font-size: 2.4vw;
           margin-bottom: 3.5vw;
@@ -269,10 +271,13 @@ header {
         }
         .works_another_text {
           line-height: 1.2;
-          font-size: 0.8vw;
+          font-size: 0.6vw;
+          padding-bottom: 2vw;
+          color: rgb(255, 124, 124);
         }
         .github_link {
           position: relative;
+          margin-bottom: 2vw;
           &::after {
             position: absolute;
             left: 0;
@@ -293,9 +298,6 @@ header {
           }
         }
         .app_link {
-          position: absolute;
-          bottom: 0;
-          right: 0;
           overflow: hidden;
           img {
             object-fit: cover;

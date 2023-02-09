@@ -128,7 +128,7 @@ header .main h2 {
   width: 50%;
 }
 .profile section .profile_box .profile_item_right h3 {
-  letter-spacing: 0.5vw;
+  letter-spacing: 0.3vw;
   font-size: 1.5vw;
   margin-bottom: 1.8vw;
   padding-bottom: 0.5vw;
@@ -151,7 +151,7 @@ header .main h2 {
   width: calc((100% - 0.8vw) / 2);
   border: 1px solid #fff;
   margin-bottom: 1vw;
-  padding: 3vw 1vw;
+  padding: 2vw 1vw 1vw 1vw;
   text-align: center;
   display: grid;
   justify-items: center;
@@ -201,44 +201,48 @@ header .main h2 {
   font-size: 1.2vw;
 }
 
-.works section .item_box {
+.works section .works_item_box {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.works section .item_box .item {
+.works section .works_item_box .works_item {
   width: calc((100% - 1.2vw) / 3);
-  height: 48vw;
   border: 0.2px solid #fff;
   text-align: center;
-  padding: 3vw 1vw;
-  position: relative;
+  padding: 2vw 1vw 1vw 1vw;
+  display: grid;
+  justify-items: center;
+  align-content: center;
 }
-.works section .item_box .item .works_title {
+.works section .works_item_box .works_item .works_title {
   font-size: 2.4vw;
   margin-bottom: 3.5vw;
 }
-.works section .item_box .item .works_text {
+.works section .works_item_box .works_item .works_text {
   text-align: left;
   margin-bottom: 2vw;
   line-height: 1.3;
 }
-.works section .item_box .item .works_text span {
+.works section .works_item_box .works_item .works_text span {
   font-size: 0.5vw;
 }
-.works section .item_box .item .works_language {
+.works section .works_item_box .works_item .works_language {
   margin-bottom: 2vw;
   color: #999;
   font-size: 0.8vw;
 }
-.works section .item_box .item .works_another_text {
+.works section .works_item_box .works_item .works_another_text {
   line-height: 1.2;
-  font-size: 0.8vw;
+  font-size: 0.6vw;
+  padding-bottom: 2vw;
+  color: rgb(255, 124, 124);
 }
-.works section .item_box .item .github_link {
+.works section .works_item_box .works_item .github_link {
   position: relative;
+  margin-bottom: 2vw;
 }
-.works section .item_box .item .github_link::after {
+.works section .works_item_box .works_item .github_link::after {
   position: absolute;
   left: 0;
   content: "";
@@ -250,24 +254,21 @@ header .main h2 {
   transform-origin: right top;
   transition: transform 0.3s;
 }
-.works section .item_box .item .github_link:hover::after {
+.works section .works_item_box .works_item .github_link:hover::after {
   transform: scale(0, 1);
 }
-.works section .item_box .item .github_link:hover {
+.works section .works_item_box .works_item .github_link:hover {
   opacity: 0.7;
 }
-.works section .item_box .item .app_link {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+.works section .works_item_box .works_item .app_link {
   overflow: hidden;
 }
-.works section .item_box .item .app_link img {
+.works section .works_item_box .works_item .app_link img {
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform 1s;
 }
-.works section .item_box .item .app_link img:hover {
+.works section .works_item_box .works_item .app_link img:hover {
   transform: scale(1.1);
 }
 
