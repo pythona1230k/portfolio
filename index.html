@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PORTFOLIO</title>
+  <link rel="stylesheet" href="sass/reset.css">
+  <link rel="stylesheet" href="sass/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+  <!-- header -->
+  <header>
+    <!-- nav -->
+    <div class="nav inner">
+      <h1>
+        <a href="index.html">
+          Portfolio
+        </a>
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="#profile">PROFILE</a></li>
+          <li><a href="#skill">SKILL</a></li>
+          <li><a href="#works">WORKS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- main -->
+    <div class="main">
+      <h2>Portfolio Site.</h2>
+    </div>
+  </header>
+
+  <!-- profile -->
+  <div id="profile" class="profile">
+    <section>
+      <h2 class="util_title">
+        <i class="fa-regular fa-user"></i>
+        PROFILE
+      </h2>
+      <div class="profile_box">
+        <div class="profile_item_left">
+          <img src="./imgs/profile.jpg" alt="logo">
+        </div>
+        <div class="profile_item_right">
+          <h3>大山 博也 (24歳)</h3>
+          <p>
+            　はじめまして。システムエンジニア志望の大山博也と申します。<br>
+            前職での機械自動運転プロジェクトがキッカケで、Pythonの学習をスタートしました。現在ではプログラミング学習が楽しくなり、
+            「IT技術を活用してより便利な世界にしたい」という思いからIT業界を志望しています。<br><br>
+            　2022/01にプログラミング学習を独学で開始。HTML, SASS, JavaScript, PHP, Java,
+            Pythonの基礎学習を終え、現在はPython(Django)をメインにWEBアプリ開発を行っています。<br><br>
+            フルスタックエンジニア、プロジェクトマネージャーを目指して現在学習中です。
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- skill -->
+  <div id="skill" class="skill">
+    <section>
+      <h2 class="util_title">
+        <i class="fa-regular fa-lightbulb"></i>
+        SKILL
+      </h2>
+      <div class="skill_item_box">
+        <!-- デザイン・コーディング -->
+        <div class="skill_box">
+          <div class="skill_item">
+            <h3 class="title">
+              <i class="fa-solid fa-palette"></i>
+              デザイン・コーディング
+            </h3>
+            <p class="text">基本的なことは一通りできます。<br>SASSでのレスポンシブ対応なども可能です。</p>
+            <div class="skill_item_list_box">
+              <table>
+                <thead>
+                  <tr>
+                    <th>技術</th>
+                    <th>経験年数</th>
+                    <th>レベル</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>HTML5</td>
+                    <td>11ヶ月</td>
+                    <td>★★★★★</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td>CSS3</td>
+                    <td>11ヶ月</td>
+                    <td>★★★★★</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td>SASS</td>
+                    <td>10ヶ月</td>
+                    <td>★★★★★</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td>Bootstrap5</td>
+                    <td>3ヶ月</td>
+                    <td>★★★★</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- フロントエンド -->
+        <div class="skill_box">
+          <div class="skill_item">
+            <h3 class="title">
+              <i class="fa-solid fa-display"></i>
+              フロントエンド
+            </h3>
+            <p class="text">訓練校時代にはVue.jsをプロの講師から学び理解を深めました。</p>
+            <div class="skill_item_list_box">
+              <table>
+                <thead>
+                  <tr>
+                    <th>技術</th>
+                    <th>経験年数</th>
+                    <th>レベル</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>JavaScript</td>
+                    <td>6ヶ月</td>
+                    <td>★★★★</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td>fw:jQuery</td>
+                    <td>2ヶ月</td>
+                    <td>★★★</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td>fw:Vue.js</td>
+                    <td>4ヶ月</td>
+                    <td>★★★</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- バックエンド -->
+        <div class="skill_box">
+          <div class="skill_item">
+            <h3 class="title">
+              <i class="fa-sharp fa-solid fa-computer"></i>
+              バックエンド
+            </h3>
+            <p class="text">現在は主にPython(Django)を用いて開発を行っています。</p>
+            <div class="skill_item_list_box">
+              <table>
+                <thead>
+                  <tr>
+                    <th>技術</th>
+                    <th>経験年数</th>
+                    <th>レベル</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Python</td>
+                    <td>1年</td>
+                    <td>★★★★</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td>fw:Django</td>
+                    <td>2ヶ月</td>
+                    <td>★★★</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td>fw:Streamlit</td>
+                    <td>3ヶ月</td>
+                    <td>★★★★</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td>PHP</td>
+                    <td>3ヶ月</td>
+                    <td>★★★</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td>fw:Laravel</td>
+                    <td>1ヶ月</td>
+                    <td>★★</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td>Java</td>
+                    <td>1ヶ月</td>
+                    <td>★★</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- DB -->
+        <div class="skill_box">
+          <div class="skill_item">
+            <h3 class="title">
+              <i class="fa-solid fa-database"></i>
+              DB
+            </h3>
+            <p class="text">MySQLでの開発をメインで行っています。</p>
+            <div class="skill_item_list_box">
+              <table>
+                <thead>
+                  <tr>
+                    <th>技術</th>
+                    <th>経験年数</th>
+                    <th>レベル</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>MySQL</td>
+                    <td>7ヶ月</td>
+                    <td>★★★</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- その他 -->
+        <div class="skill_box">
+          <div class="skill_item">
+            <h3 class="title">
+              <i class="fa-solid fa-toolbox"></i>
+              その他
+            </h3>
+            <p class="text">開発等で使用したツールです。</p>
+            <div class="skill_item_list_box">
+              <table>
+                <thead>
+                  <tr>
+                    <th>技術</th>
+                    <th>経験年数</th>
+                    <th>レベル</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Git</td>
+                    <td>3ヶ月</td>
+                    <td>★★★★</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td>XD</td>
+                    <td>6ヶ月</td>
+                    <td>★★★★</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td>Illustrator</td>
+                    <td>6ヶ月</td>
+                    <td>★★★</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td>Photoshop</td>
+                    <td>6ヶ月</td>
+                    <td>★★★</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td>Chatwork</td>
+                    <td>4ヶ月</td>
+                    <td>★★★★</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- 資格 -->
+        <div class="skill_box">
+          <div class="skill_item">
+            <h3 class="title">
+              <i class="fa-solid fa-id-card"></i>
+              保有資格
+            </h3>
+            <p class="text">※AWS認定 クラウドプラクティショナーを2023年以内に取得します。</p>
+            <div class="skill_item_list">
+              <ol>
+                <li>
+                  <p>運転免許証　準中型（5t未満）</p>
+                </li>
+                <li>
+                  <p>WEBクリエイティブ検定　エキスパート</p>
+                </li>
+                <li>
+                  <p>色彩検定2級</p>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- works -->
+  <div id="works" class="works inner">
+    <section>
+      <h2 class="util_title">
+        <i class="fa-sharp fa-solid fa-list"></i>
+        WORKS
+      </h2>
+      <!-- 成果物box -->
+      <div class="item_box">
+        <!-- todo -->
+        <div class="item">
+          <div class="works_wrapper">
+            <h3 class="works_title">
+              <i class="fa-solid fa-desktop"></i>
+              Todo アプリ
+            </h3>
+            <p class="works_text">
+              Python(Django)を用いたWEBアプリになります。<br><br>
+              制作で意識した点は、CRUD機能。<br>
+              アカウント登録機能の実装になります。<br>
+              これらは今後アプリ制作を行う時に必須になると思い実装しました。<br><br>
+              制作理由としましては、Djangoでのアプリ開発基礎を身につけるためです。<br><br>
+              <span>※制作時間：約8時間</span>
+            </p>
+            <p class="works_language">
+              Python/Django/Bootstrap5/MySQL/HTML
+            </p>
+            <a class="github_link" href="https://github.com/pythona1230k/todo-app-django" target="_blank">GitHub</a>
+          </div>
+          <a class="app_link" href="https://python33app.pythonanywhere.com/" target="blank"><img src="./imgs/todo.png"
+              alt="アプリ画像"></a>
+        </div>
+        <!-- blog -->
+        <div class="item">
+          <h3 class="works_title">
+            <i class="fa-solid fa-desktop"></i>
+            Blog アプリ
+          </h3>
+          <p class="works_text">
+            Python(Django)を用いたWEBアプリになります。<br><br>
+            検索バー・カテゴリー・タグ・ブログへのコメント機能などを実装しました。<br><br>
+            Blogアプリですので、データベースで記事を作成する際にマークダウン記法を使用できるようPythonライブラリの導入も行いました。<br><br>
+            制作理由としましては、Todoアプリの時と同様にDjangoでのアプリ開発の基礎を身につけるためです。<br><br>
+            <span>※制作時間：約22時間</span>
+          </p>
+          <p class="works_language">
+            Python/Django/Bootstrap5/MySQL/HTML/CSS3
+          </p>
+          <a class="github_link" href="https://github.com/pythona1230k/blog-app-django" target="_blank">GitHub</a>
+          <a class="app_link" href="https://python77app.pythonanywhere.com/" target="_blank"><img src="./imgs/blog.png"
+              alt="アプリ画像"></a>
+        </div>
+        <!-- twitter_bot -->
+        <div class="item">
+          <h3 class="works_title">
+            <i class="fa-solid fa-robot"></i>
+            Twitter Bot
+          </h3>
+          <p class="works_text">
+            Python(Stremalit)を用いたWEBアプリになります。<br><br>
+            TwitterAPIを使用しており、Twitterの一部自動化が可能なアプリとなっています。<br>
+            機能としましては、特定のターゲットかつ人数を指定後、自動でフォロー・いいねを行えます。<br><br>
+            制作理由としましては、お客様に「使いたい。」と思っていただけるアプリ内容だと考えたからです。<br>
+            現状4名様からの制作依頼があります。<br><br>
+            <span>※制作時間：約25時間</span>
+          </p>
+          <p class="works_language">
+            Python/Streamlit/HTML
+          </p>
+          <p class="works_another_text">
+            ※私自身のTwitterAPIを発行しているため、<br>ソースコード・アプリURLを記載できず申し訳ありません。<br><br>
+            代わりにイメージ動画を用意しました。
+          </p>
+          <a class="app_link" href="#" target="blank"><img
+              src="./imgs/twitter_bot.png" alt="アプリ画像"></a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- contact -->
+  <div id="contact" class="contact">
+    <section>
+      <h2 class="util_title">
+        <i class="fa-regular fa-envelope"></i>
+        CONTACT
+      </h2>
+      <div class="contact_item">
+        <p>
+          何かございましたら、Twitter DMよりご連絡をお願いいたします。
+        </p>
+        <a href="https://twitter.com/pythonapi13" target="blank">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!-- footer -->
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="#profile">PROFILE</a></li>
+        <li><a href="#skill">SKILL</a></li>
+        <li><a href="#works">WORKS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+    <p>
+      <small>
+        Copyright&copy;Hiroya Oyama. All Rights Reserved.
+      </small>
+    </p>
+  </footer>
+
+  <!-- top scroll -->
+  <div class="top_scroll">Top</div>
+
+  <script src="js/anime.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

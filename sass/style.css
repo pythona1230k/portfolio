@@ -1,0 +1,488 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-size: 0.9vw;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: #fff;
+}
+
+.inner {
+  padding: 1vw;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.util_title {
+  text-align: center;
+  font-size: 4vw;
+  margin-top: 13vw;
+  margin-bottom: 4vw;
+}
+
+header {
+  position: relative;
+  overflow: hidden;
+}
+
+header .block {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  outline: 1px solid white;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  right: 50%;
+  top: 50%;
+  opacity: .1;
+}
+
+header .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1vw;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 20;
+}
+
+header .nav h1 a {
+  font-size: 2vw;
+  padding: 0.3vw;
+  border: 1px solid #fff;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+header .nav h1 a:hover {
+  opacity: 0.6;
+}
+
+header .nav nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .nav nav ul li {
+  margin-left: 1.5vw;
+}
+
+header .nav nav ul li a {
+  position: relative;
+  font-size: 1.2vw;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+header .nav nav ul li a::after {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  bottom: -1px;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+header .nav nav ul li a:hover::after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+header .nav nav ul li a:hover {
+  opacity: 0.6;
+}
+
+header .main {
+  width: 100%;
+  height: 100vh;
+  background: url(../imgs/main.jpg) no-repeat center center/cover;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .main h2 {
+  z-index: 2;
+  font-size: 4vw;
+  letter-spacing: 1vw;
+  padding: 1.5vw 2.5vw;
+  border: 3px solid #fff;
+}
+
+.profile {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.profile section .profile_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profile section .profile_box .profile_item_left {
+  width: 50%;
+  text-align: right;
+  padding-right: 1.2vw;
+}
+
+.profile section .profile_box .profile_item_left img {
+  width: 25vw;
+  height: 25vw;
+  border-radius: 50%;
+}
+
+.profile section .profile_box .profile_item_right {
+  width: 50%;
+}
+
+.profile section .profile_box .profile_item_right h3 {
+  letter-spacing: 0.5vw;
+  font-size: 1.5vw;
+  margin-bottom: 1.8vw;
+  padding-bottom: 0.5vw;
+}
+
+.profile section .profile_box .profile_item_right p {
+  line-height: 1.3;
+  font-size: 1vw;
+}
+
+.skill {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.skill section .skill_item_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.skill section .skill_item_box .skill_box {
+  width: calc((100% - 0.8vw) / 2);
+  border: 1px solid #fff;
+  margin-bottom: 1vw;
+  padding: 3vw 1vw;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.skill section .skill_item_box .skill_box .skill_item {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.skill section .skill_item_box .skill_box .skill_item .title {
+  font-size: 2.4vw;
+  margin-bottom: 1.5vw;
+}
+
+.skill section .skill_item_box .skill_box .skill_item .text {
+  font-size: 0.8vw;
+  margin-bottom: 4vw;
+  line-height: 1.2;
+}
+
+.skill section .skill_item_box .skill_box .skill_item .skill_item_list_box table thead tr th {
+  font-size: 1.3vw;
+  padding-bottom: 1.7vw;
+  width: 8vw;
+  position: relative;
+}
+
+.skill section .skill_item_box .skill_box .skill_item .skill_item_list_box table thead tr th::after {
+  content: "";
+  width: 70%;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 1.3vw;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateX(20%);
+          transform: translateX(20%);
+}
+
+.skill section .skill_item_box .skill_box .skill_item .skill_item_list_box table tbody tr td {
+  font-size: 0.9vw;
+  padding-bottom: 1.2vw;
+  letter-spacing: 0.2vw;
+}
+
+.skill section .skill_item_box .skill_box .skill_item .skill_item_list ol li:not(:last-child) {
+  padding-bottom: 1vw;
+}
+
+.skill section .skill_item_box .skill_box .skill_item .skill_item_list ol li p {
+  font-size: 1.2vw;
+}
+
+.works section .item_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.works section .item_box .item {
+  width: calc((100% - 1.2vw) / 3);
+  height: 48vw;
+  border: 0.2px solid #fff;
+  text-align: center;
+  padding: 3vw 1vw;
+  position: relative;
+}
+
+.works section .item_box .item .works_title {
+  font-size: 2.4vw;
+  margin-bottom: 3.5vw;
+}
+
+.works section .item_box .item .works_text {
+  text-align: left;
+  margin-bottom: 2vw;
+  line-height: 1.3;
+}
+
+.works section .item_box .item .works_text span {
+  font-size: 0.5vw;
+}
+
+.works section .item_box .item .works_language {
+  margin-bottom: 2vw;
+  color: #999;
+  font-size: 0.8vw;
+}
+
+.works section .item_box .item .works_another_text {
+  line-height: 1.2;
+  font-size: 0.8vw;
+}
+
+.works section .item_box .item .github_link {
+  position: relative;
+}
+
+.works section .item_box .item .github_link::after {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  bottom: -0.2vw;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.works section .item_box .item .github_link:hover::after {
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+}
+
+.works section .item_box .item .github_link:hover {
+  opacity: 0.7;
+}
+
+.works section .item_box .item .app_link {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.works section .item_box .item .app_link img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.works section .item_box .item .app_link img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.contact .contact_item {
+  text-align: center;
+}
+
+.contact .contact_item p {
+  font-size: 1.2vw;
+  margin-bottom: 1vw;
+}
+
+.contact .contact_item a {
+  font-size: 4vw;
+  -webkit-transition: opacity 0.8s;
+  transition: opacity 0.8s;
+}
+
+.contact .contact_item a:hover {
+  opacity: 0.6;
+}
+
+footer {
+  margin-top: 13vw;
+  border-top: 1px solid #fff;
+  padding: 1.5vw;
+  text-align: center;
+}
+
+footer nav {
+  margin-bottom: 1vw;
+}
+
+footer nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer nav ul li:not(:last-child) {
+  margin-right: 1vw;
+}
+
+footer nav ul li a {
+  position: relative;
+  font-size: 1.2vw;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+footer nav ul li a::after {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  bottom: -1px;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+footer nav ul li a:hover::after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+footer nav ul li a:hover {
+  opacity: 0.6;
+}
+
+footer p small {
+  color: #999;
+  font-size: 0.6vw;
+}
+
+.top_scroll {
+  position: fixed;
+  right: 2vw;
+  bottom: 2vw;
+  border-radius: 5px;
+  outline: 1px solid #fff;
+  color: #fff;
+  width: 4vw;
+  height: 4vw;
+  font-size: 1.2vw;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 3s, visibility 3s;
+  transition: opacity 3s, visibility 3s;
+}
+
+.top_scroll.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.top_scroll:hover {
+  opacity: 0.5;
+}
+/*# sourceMappingURL=style.css.map */
