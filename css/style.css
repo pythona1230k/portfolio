@@ -30,7 +30,9 @@ a {
 }
 @media screen and (max-width:800px) {
   .util_title {
-    font-size: 10vw;
+    font-size: 13vw;
+    margin-top: 28vw;
+    margin-bottom: 10vw;
   }
 }
 
@@ -218,6 +220,8 @@ header .main {
 @media screen and (max-width:800px) {
   header .main {
     background: url(../imgs/main_sp.jpg) no-repeat center center/cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 header .main h2 {
@@ -256,7 +260,6 @@ header .main h2 {
   .profile section .profile_box .profile_item_left {
     width: 100%;
     text-align: center;
-    margin-top: 8vw;
     margin-bottom: 8vw;
   }
 }
@@ -270,13 +273,13 @@ header .main h2 {
 }
 @media screen and (max-width:800px) {
   .profile section .profile_box .profile_item_right {
-    width: 70%;
+    width: 100%;
     text-align: left;
     margin: 0 auto;
   }
 }
 .profile section .profile_box .profile_item_right h3 {
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.3vw;
   font-size: 1.5vw;
   margin-bottom: 1.8vw;
@@ -284,17 +287,19 @@ header .main h2 {
 }
 @media screen and (max-width:800px) {
   .profile section .profile_box .profile_item_right h3 {
-    font-size: 7vw;
-    margin-bottom: 4vw;
+    text-align: center;
+    font-size: 6vw;
+    margin-bottom: 8vw;
   }
 }
 .profile section .profile_box .profile_item_right p {
-  line-height: 1.3;
+  line-height: 1.4;
   font-size: 1vw;
 }
 @media screen and (max-width:800px) {
   .profile section .profile_box .profile_item_right p {
-    font-size: 4vw;
+    font-size: 3.5vw;
+    line-height: 1.6;
   }
 }
 
