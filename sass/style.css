@@ -166,8 +166,8 @@ header .nav #nav_area .sp_nav {
   z-index: 100;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 4s, right .8s;
-  transition: opacity 4s, right .8s;
+  -webkit-transition: opacity 4s, right 0.8s;
+  transition: opacity 4s, right 0.8s;
 }
 
 header .nav #nav_area .sp_nav.active {
@@ -209,8 +209,8 @@ header .nav #nav_area .toggle_btn.active span {
 }
 
 header .nav #nav_area .toggle_btn.active span:nth-child(1) {
-  -webkit-transform: translate(14px, 5px) rotate(-410deg);
-          transform: translate(14px, 5px) rotate(-410deg);
+  -webkit-transform: translate(14px, 7px) rotate(-410deg);
+          transform: translate(14px, 7px) rotate(-410deg);
 }
 
 header .nav #nav_area .toggle_btn.active span:nth-child(2) {
@@ -218,13 +218,13 @@ header .nav #nav_area .toggle_btn.active span:nth-child(2) {
 }
 
 header .nav #nav_area .toggle_btn.active span:nth-child(3) {
-  -webkit-transform: translate(15px, -10px) rotate(410deg);
-          transform: translate(15px, -10px) rotate(410deg);
+  -webkit-transform: translate(15px, -12px) rotate(410deg);
+          transform: translate(15px, -12px) rotate(410deg);
 }
 
 header .nav #nav_area .toggle_btn span {
   position: absolute;
-  width: 5vw;
+  width: 30px;
   height: 1px;
   background-color: #fff;
   top: 0;
@@ -234,7 +234,7 @@ header .nav #nav_area .toggle_btn span {
 }
 
 header .nav #nav_area .toggle_btn span:nth-child(1) {
-  top: 1vw;
+  top: 10px;
   -webkit-transition: background 1s, -webkit-transform 0.8s;
   transition: background 1s, -webkit-transform 0.8s;
   transition: transform 0.8s, background 1s;
@@ -242,13 +242,13 @@ header .nav #nav_area .toggle_btn span:nth-child(1) {
 }
 
 header .nav #nav_area .toggle_btn span:nth-child(2) {
-  top: 2.5vw;
+  top: 20px;
   -webkit-transition: opacity 1s, background 1s;
   transition: opacity 1s, background 1s;
 }
 
 header .nav #nav_area .toggle_btn span:nth-child(3) {
-  top: 4vw;
+  top: 30px;
   -webkit-transition: background 1s, -webkit-transform 0.8s;
   transition: background 1s, -webkit-transform 0.8s;
   transition: transform 0.8s, background 1s;
@@ -407,6 +407,12 @@ header .main h2 {
       flex-wrap: wrap;
 }
 
+@media screen and (max-width: 800px) {
+  .skill section .skill_item_box {
+    display: block;
+  }
+}
+
 .skill section .skill_item_box .skill_box {
   width: calc((100% - 0.8vw) / 2);
   border: 1px solid #fff;
@@ -422,7 +428,9 @@ header .main h2 {
 
 @media screen and (max-width: 800px) {
   .skill section .skill_item_box .skill_box {
-    padding: 3vw 2vw 2vw 2vw;
+    padding: 10vw 2vw;
+    width: 100%;
+    margin: 0 auto 3vw;
   }
 }
 
@@ -437,13 +445,29 @@ header .main h2 {
 
 .skill section .skill_item_box .skill_box .skill_item .title {
   font-size: 2.4vw;
-  margin-bottom: 1.5vw;
+  margin-bottom: 3vw;
+}
+
+@media screen and (max-width: 800px) {
+  .skill section .skill_item_box .skill_box .skill_item .title {
+    font-size: 8vw;
+    margin-bottom: 8vw;
+  }
 }
 
 .skill section .skill_item_box .skill_box .skill_item .text {
   font-size: 0.8vw;
   margin-bottom: 4vw;
   line-height: 1.2;
+  width: 70%;
+}
+
+@media screen and (max-width: 800px) {
+  .skill section .skill_item_box .skill_box .skill_item .text {
+    font-size: 3vw;
+    margin-bottom: 12vw;
+    width: 70%;
+  }
 }
 
 .skill section .skill_item_box .skill_box .skill_item .skill_item_list_box table thead tr th {
@@ -451,6 +475,14 @@ header .main h2 {
   padding-bottom: 1.7vw;
   width: 8vw;
   position: relative;
+}
+
+@media screen and (max-width: 800px) {
+  .skill section .skill_item_box .skill_box .skill_item .skill_item_list_box table thead tr th {
+    font-size: 4vw;
+    width: 18vw;
+    padding-bottom: 3vw;
+  }
 }
 
 .skill section .skill_item_box .skill_box .skill_item .skill_item_list_box table thead tr th::after {
@@ -472,12 +504,32 @@ header .main h2 {
   letter-spacing: 0.2vw;
 }
 
+@media screen and (max-width: 800px) {
+  .skill section .skill_item_box .skill_box .skill_item .skill_item_list_box table tbody tr td {
+    font-size: 4vw;
+    line-height: 2.5;
+  }
+}
+
 .skill section .skill_item_box .skill_box .skill_item .skill_item_list ol li:not(:last-child) {
   padding-bottom: 1vw;
 }
 
 .skill section .skill_item_box .skill_box .skill_item .skill_item_list ol li p {
   font-size: 1.2vw;
+}
+
+@media screen and (max-width: 800px) {
+  .skill section .skill_item_box .skill_box .skill_item .skill_item_list ol li p {
+    font-size: 4vw;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .works {
+    width: 90%;
+  }
 }
 
 .works section .works_item_box {
@@ -511,9 +563,9 @@ header .main h2 {
 
 @media screen and (max-width: 800px) {
   .works section .works_item_box .works_item {
-    width: 70%;
-    margin: 0 auto;
-    padding: 5vw 2vw 2vw 2vw;
+    padding: 12vw 2vw 2vw 2vw;
+    width: 100%;
+    margin: 0 auto 3vw;
   }
   .works section .works_item_box .works_item:not(:last-child) {
     margin-bottom: 4vw;
@@ -527,8 +579,8 @@ header .main h2 {
 
 @media screen and (max-width: 800px) {
   .works section .works_item_box .works_item .works_title {
-    font-size: 3vw;
-    margin-bottom: 5vw;
+    font-size: 8vw;
+    margin-bottom: 12vw;
   }
 }
 
@@ -540,13 +592,20 @@ header .main h2 {
 
 @media screen and (max-width: 800px) {
   .works section .works_item_box .works_item .works_text {
-    font-size: 2px;
-    margin-bottom: 5vw;
+    width: 90%;
+    font-size: 3vw;
+    margin-bottom: 12vw;
   }
 }
 
 .works section .works_item_box .works_item .works_text span {
   font-size: 0.5vw;
+}
+
+@media screen and (max-width: 800px) {
+  .works section .works_item_box .works_item .works_text span {
+    font-size: 3vw;
+  }
 }
 
 .works section .works_item_box .works_item .works_language {
@@ -557,7 +616,8 @@ header .main h2 {
 
 @media screen and (max-width: 800px) {
   .works section .works_item_box .works_item .works_language {
-    margin-bottom: 5vw;
+    margin-bottom: 12vw;
+    font-size: 3vw;
   }
 }
 
@@ -570,7 +630,8 @@ header .main h2 {
 
 @media screen and (max-width: 800px) {
   .works section .works_item_box .works_item .works_another_text {
-    margin-bottom: 5vw;
+    margin-bottom: 12vw;
+    font-size: 2.5vw;
   }
 }
 
@@ -581,7 +642,8 @@ header .main h2 {
 
 @media screen and (max-width: 800px) {
   .works section .works_item_box .works_item .github_link {
-    margin-bottom: 5vw;
+    margin-bottom: 12vw;
+    font-size: 3vw;
   }
 }
 
@@ -636,12 +698,13 @@ header .main h2 {
 
 .contact .contact_item p {
   font-size: 1.2vw;
-  margin-bottom: 1vw;
+  margin-bottom: 3vw;
 }
 
 @media screen and (max-width: 800px) {
   .contact .contact_item p {
-    margin-bottom: 3vw;
+    margin-bottom: 5vw;
+    font-size: 3vw;
   }
 }
 
@@ -653,7 +716,7 @@ header .main h2 {
 
 @media screen and (max-width: 800px) {
   .contact .contact_item a {
-    font-size: 7vw;
+    font-size: 10vw;
   }
 }
 
@@ -663,60 +726,14 @@ header .main h2 {
 
 footer {
   margin-top: 13vw;
-  border-top: 1px solid #fff;
   padding: 1.5vw;
   text-align: center;
 }
 
-footer nav {
-  margin-bottom: 1vw;
-}
-
-footer nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-footer nav ul li:not(:last-child) {
-  margin-right: 1vw;
-}
-
-footer nav ul li a {
-  position: relative;
-  font-size: 1.2vw;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-footer nav ul li a::after {
-  position: absolute;
-  left: 0;
-  content: "";
-  width: 100%;
-  height: 1px;
-  background-color: #fff;
-  bottom: -1px;
-  -webkit-transform: scale(0, 1);
-          transform: scale(0, 1);
-  -webkit-transform-origin: left top;
-          transform-origin: left top;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
-}
-
-footer nav ul li a:hover::after {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
-}
-
-footer nav ul li a:hover {
-  opacity: 0.6;
+@media screen and (max-width: 800px) {
+  footer {
+    padding: 4vw;
+  }
 }
 
 footer p small {
