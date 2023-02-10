@@ -460,9 +460,9 @@ header {
         @include mq(sp) {
           padding: 12vw 2vw 2vw 2vw;
           width: 100%;
-          margin: 0 auto 3vw;
+          margin: 0 auto;
           &:not(:last-child) {
-            margin-bottom: 4vw;
+            margin-bottom: 10vw;
           }
         }
         .works_title {
