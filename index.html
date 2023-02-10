@@ -23,7 +23,7 @@
           Portfolio
         </a>
       </h1>
-      <nav>
+      <nav class="pc_nav">
         <ul>
           <li><a href="#profile">PROFILE</a></li>
           <li><a href="#skill">SKILL</a></li>
@@ -31,6 +31,28 @@
           <li><a href="#contact">CONTACT</a></li>
         </ul>
       </nav>
+
+      <!-- ハンバーガーメニュー -->
+      <div id="nav_area">
+        <!-- menu -->
+        <nav class="sp_nav">
+          <ul>
+            <li><a href="#profile">PROFILE</a></li>
+            <li><a href="#skill">SKILL</a></li>
+            <li><a href="#works">WORKS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+        <!-- btn -->
+        <div class="toggle_btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <!-- mask -->
+        <div id="mask"></div>
+      </div>
+
     </div>
     <!-- main -->
     <div class="main">
@@ -52,7 +74,7 @@
         <div class="profile_item_right">
           <h3>大山 博也 (24歳)</h3>
           <p>
-            　はじめまして。システムエンジニア志望の大山博也と申します。<br>
+            はじめまして。システムエンジニア志望の大山博也と申します。<br>
             前職での機械自動運転プロジェクトがキッカケで、Pythonの学習をスタートしました。現在ではプログラミング学習が楽しくなり、
             「IT技術を活用してより便利な世界にしたい」という思いからIT業界を志望しています。<br><br>
             　2022/01にプログラミング学習を独学で開始。HTML, SASS, JavaScript, PHP, Java,
@@ -408,7 +430,8 @@
             ※私自身のTwitterAPIを発行しているため、<br>ソースコード・アプリURLを記載できず申し訳ありません。<br><br>
             代わりにイメージ動画を用意しました。
           </p>
-          <a class="app_link" href="https://youtu.be/6TcZV6OqaCs" target="blank"><img src="./imgs/twitter_bot.png" alt="アプリ画像"></a>
+          <a class="app_link" href="https://youtu.be/6TcZV6OqaCs" target="blank"><img src="./imgs/twitter_bot.png"
+              alt="アプリ画像"></a>
         </div>
       </div>
     </section>

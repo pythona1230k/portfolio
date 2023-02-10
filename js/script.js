@@ -37,21 +37,21 @@ function scroll_top() {
 
 // ball animation
 const header = document.querySelector('header');
-for (var i = 0; i <= 50; i++){
+for (var i = 0; i <= 50; i++) {
   const blocks = document.createElement('div');
   blocks.classList.add('block');
   header.appendChild(blocks);
 }
-function animateBlocks(){
+function animateBlocks() {
   anime({
     targets: '.block',
-    translateX: function(){
+    translateX: function () {
       return anime.random(-800, 700);
     },
-    translateY: function(){
+    translateY: function () {
       return anime.random(-600, 700);
     },
-    scale: function(){
+    scale: function () {
       return anime.random(1, 3)
     },
     duration: 2500,
@@ -59,5 +59,22 @@ function animateBlocks(){
     complete: animateBlocks,
   })
 }
-
 animateBlocks();
+
+// ハンバーガー
+//humberger
+const btn = document.querySelector('.toggle_btn');
+const inner = document.querySelector('.sp_nav');
+const mask = document.querySelector('#mask');
+
+btn.onclick = () => {
+  inner.classList.toggle('active');
+  mask.classList.toggle('active');
+  btn.classList.toggle('active');
+};
+
+mask.onclick = () => {
+  inner.classList.toggle('active');
+  mask.classList.toggle('active');
+  btn.classList.toggle('active');
+};

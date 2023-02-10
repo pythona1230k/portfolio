@@ -1,7 +1,21 @@
+// color
 $main_color: #000;
 $main_font_color: #fff;
 $sum_font_color: #999;
 
+// responsive
+$breakpoints: (
+  "sp": "screen and (max-width:800px)",
+  "pc": "screen and (min-width:801px)",
+) !default;
+
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints,$breakpoint)} {
+    @content;
+  }
+}
+
+// common
 body {
   background-color: $main_color;
   color: $main_font_color;
@@ -19,6 +33,9 @@ a {
 .inner {
   padding: 1vw 1.5vw;
   margin: 0 auto;
+  @include mq(sp) {
+    padding: 3vw 2vw;
+  }
 }
 
 .util_title {
@@ -26,6 +43,9 @@ a {
   font-size: 4vw;
   margin-top: 13vw;
   margin-bottom: 4vw;
+  @include mq(sp) {
+    font-size: 6vw;
+  }
 }
 
 // header
@@ -37,11 +57,14 @@ header {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    outline: 1px solid rgb(255, 255, 255);
+    outline: 0.9px solid $main_font_color;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
     right: 50%;
     top: 50%;
     opacity: 0.1;
+    @include mq(sp) {
+      outline: 0.2px solid rgba(255, 255, 255, 0.7);
+    }
   }
   .nav {
     display: flex;
@@ -53,20 +76,25 @@ header {
     right: 0;
     top: 0;
     z-index: 20;
-
     h1 {
       a {
         font-size: 2vw;
         padding: 0.3vw;
         border: 1px solid $main_font_color;
         transition: opacity 0.3s;
+        @include mq(sp) {
+          font-size: 3vw;
+        }
         &:hover {
           opacity: 0.6;
         }
       }
     }
 
-    nav {
+    .pc_nav {
+      @include mq(sp) {
+        display: none;
+      }
       ul {
         display: flex;
         li {
@@ -97,6 +125,115 @@ header {
         }
       }
     }
+    // ハンバーガー
+    //nav
+    #nav_area {
+      display: none;
+      @include mq(sp) {
+        display: block;
+      }
+      // menu
+      .sp_nav {
+        position: fixed;
+        top: 15vw;
+        right: -20rem;
+        width: 13rem;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 4s, right .8s;
+        &.active {
+          right: 4vw;
+          opacity: 1;
+          visibility: visible;
+        }
+        ul {
+          li {
+            margin-bottom: 2rem;
+            a {
+              font-size: 1.7rem;
+              display: block;
+              color: $main_font_color;
+              border-bottom: 1px solid $main_font_color;
+              padding: 0.7rem 0;
+              &:hover {
+                background-color: rgb(138, 138, 138);
+              }
+            }
+          }
+        }
+      }
+      // btn
+      .toggle_btn {
+        position: fixed;
+        top: 3vw;
+        right: 2vw;
+        width: 6vw;
+        height: 5vw;
+        z-index: 3;
+        transition: all 0.9s;
+        cursor: pointer;
+
+        &.active {
+          span {
+            background-color: #fff;
+
+            &:nth-child(1) {
+              transform: translate(14px, 5px) rotate(-410deg);
+            }
+
+            &:nth-child(2) {
+              opacity: 0;
+            }
+
+            &:nth-child(3) {
+              transform: translate(15px, -10px) rotate(410deg);
+            }
+          }
+        }
+
+        span {
+          position: absolute;
+          width: 5vw;
+          height: 1px;
+          background-color: $main_font_color;
+          top: 0;
+          right: 50%;
+          transform: translateX(47%);
+          &:nth-child(1) {
+            top: 1vw;
+            transition: transform 0.8s, background 1s;
+          }
+
+          &:nth-child(2) {
+            top: 2.5vw;
+            transition: opacity 1s, background 1s;
+          }
+
+          &:nth-child(3) {
+            top: 4vw;
+            transition: transform 0.8s, background 1s;
+          }
+        }
+      }
+
+      #mask {
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        display: none;
+        opacity: 0.8;
+        z-index: 1;
+
+        &.active {
+          display: block;
+        }
+      }
+    }
   }
   // main
   .main {
@@ -106,12 +243,18 @@ header {
     display: grid;
     justify-content: center;
     align-items: center;
+    @include mq(sp) {
+      background: url(../imgs/main_sp.jpg) no-repeat center center/cover;
+    }
     h2 {
       z-index: 2;
       font-size: 4vw;
       letter-spacing: 1vw;
       padding: 1.5vw 2.5vw;
       border: 3px solid $main_font_color;
+      @include mq(sp) {
+        font-size: 7vw;
+      }
     }
   }
 }
@@ -125,10 +268,18 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
+      @include mq(sp) {
+        display: block;
+      }
       .profile_item_left {
         width: 50%;
         text-align: right;
         padding-right: 1.2vw;
+        @include mq(sp) {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 3vw;
+        }
         img {
           width: 25vw;
           height: 25vw;
@@ -137,7 +288,13 @@ header {
       }
       .profile_item_right {
         width: 50%;
+        @include mq(sp) {
+          width: 70%;
+          text-align: left;
+          margin: 0 auto;
+        }
         h3 {
+          text-align: center;
           letter-spacing: 0.3vw;
           font-size: 1.5vw;
           margin-bottom: 1.8vw;
@@ -170,6 +327,9 @@ header {
         display: grid;
         justify-items: center;
         align-content: center;
+        @include mq(sp) {
+          padding: 3vw 2vw 2vw 2vw;
+        }
         .skill_item {
           text-align: center;
           display: grid;
@@ -243,6 +403,9 @@ header {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      @include mq(sp) {
+        display: block;
+      }
       .works_item {
         width: calc((100% - 1.2vw) / 3);
         border: 0.2px solid $main_font_color;
@@ -251,14 +414,30 @@ header {
         display: grid;
         justify-items: center;
         align-content: center;
+        @include mq(sp) {
+          width: 70%;
+          margin: 0 auto;
+          padding: 5vw 2vw 2vw 2vw;
+          &:not(:last-child) {
+            margin-bottom: 4vw;
+          }
+        }
         .works_title {
           font-size: 2.4vw;
           margin-bottom: 3.5vw;
+          @include mq(sp) {
+            font-size: 3vw;
+            margin-bottom: 5vw;
+          }
         }
         .works_text {
           text-align: left;
           margin-bottom: 2vw;
           line-height: 1.3;
+          @include mq(sp) {
+            font-size: 2px;
+            margin-bottom: 5vw;
+          }
           span {
             font-size: 0.5vw;
           }
@@ -267,16 +446,25 @@ header {
           margin-bottom: 2vw;
           color: $sum_font_color;
           font-size: 0.8vw;
+          @include mq(sp) {
+            margin-bottom: 5vw;
+          }
         }
         .works_another_text {
           line-height: 1.2;
           font-size: 0.6vw;
           padding-bottom: 2vw;
           color: rgb(255, 124, 124);
+          @include mq(sp) {
+            margin-bottom: 5vw;
+          }
         }
         .github_link {
           position: relative;
           margin-bottom: 2vw;
+          @include mq(sp) {
+            margin-bottom: 5vw;
+          }
           &::after {
             position: absolute;
             left: 0;
@@ -318,10 +506,16 @@ header {
     p {
       font-size: 1.2vw;
       margin-bottom: 1vw;
+      @include mq(sp) {
+        margin-bottom: 3vw;
+      }
     }
     a {
       font-size: 4vw;
       transition: opacity 0.8s;
+      @include mq(sp) {
+        font-size: 7vw;
+      }
       &:hover {
         opacity: 0.6;
       }
@@ -397,6 +591,11 @@ footer {
   opacity: 0;
   visibility: hidden;
   transition: opacity 3s, visibility 3s;
+  @include mq(sp) {
+    width: 8vw;
+    height: 8vw;
+    font-size: 3vw;
+  }
 
   &.active {
     opacity: 1;
